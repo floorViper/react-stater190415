@@ -1,0 +1,99 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.item {
+  width: 500px;
+  height: 100px;
+  background-color: green;
+}
+.header {
+  width: 100%;
+  height: 85px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: yellow;
+  z-index: 999;
+}
+.nav-wrap {
+  margin-top: 85px;
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  z-index: 101;
+  visibility: hidden;
+  display: flex;
+}
+.nav-left {
+  width: 200px;
+  background-color: skyblue;
+  height: 100%;
+}
+.nav-right {
+  flex: 1;
+  background-color: skyblue;
+  opacity: 0.5;
+}
+.container {
+  /* position: relative; */
+  padding-top: 100px;
+  background-color: red;
+  height: 100%;
+  /* z-index: 100; */
+}
+.content {
+  margin: 10px;
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    margin-left: 200px;
+  }
+  .container.margin {
+    margin-left: 0px;
+  }
+  .nav-wrap {
+    visibility: visible;
+    width: 200px;
+  }
+  .nav-left {
+    width: 200px;
+  }
+  .nav-right {
+    visibility: hidden;
+    width: 0;
+    /* display: none; */
+  }
+}
+/* @media screen and (min-width: 550px) {
+      .nav-wrap {
+        visibility: hidden;
+      }
+    } */
+.footer {
+  position: relative;
+  top: -80px;
+  height: 80px;
+  background-color: pink;
+}
+.mobile-nav__visiable {
+  visibility: visible;
+  margin-top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.pc-nav__visiable {
+  /* visibility: hidden; */
+  display: none;
+}
