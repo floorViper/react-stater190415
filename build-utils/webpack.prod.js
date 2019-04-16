@@ -13,17 +13,23 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.(css|scss)$/,
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
           use: [
             {
               loader: "css-loader",
               options: {
-                modules: true,
+                // modules: true,
                 // @import(ed) 리소스에 css-loader를 적용하기 전 로더를 구성한다.
                 importLoaders: 1,
                 camelCase: true,
+                sourceMap: true
+              }
+            },
+            {
+              loader: require.resolve("sass-loader"),
+              options: {
                 sourceMap: true
               }
             },
