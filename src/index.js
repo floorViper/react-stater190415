@@ -3,6 +3,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App";
 
+// const Hot = hot(App);
+
+//ReactDOM.render(<Hot />, document.querySelector("#root"));
 const render = Component =>
   ReactDOM.render(
     <AppContainer>
@@ -13,5 +16,5 @@ const render = Component =>
 
 render(App);
 
-// Webpack Hot Module Replacement API 부분
 if (module.hot) module.hot.accept("./components/App", () => render(App));
+//Webpack Hot Module Replacement API 부분

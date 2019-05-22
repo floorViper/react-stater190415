@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const config = {
   entry: {
-    vendor: ["semantic-ui-react", "react", "react-dom"]
+     vendor: ["semantic-ui-react", "react", "react-dom"]
   },
   output: {
     path: commonPaths.outputPath,
